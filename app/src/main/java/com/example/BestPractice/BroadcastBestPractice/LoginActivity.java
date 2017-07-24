@@ -11,9 +11,7 @@ import android.widget.Toast;
 import com.example.helloworld.BaseActivity;
 import com.example.helloworld.R;
 
-/**
- * A login screen that offers login via email/password.
- */
+//这里因为当强制下线触发后需要关闭所有已打开的Activity返回到登录画面，所以我们要继承BaseActivity，利用其中的ActivityCollector
 public class LoginActivity extends BaseActivity{
 
     private EditText username, password;

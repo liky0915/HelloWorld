@@ -132,7 +132,7 @@
             android:name="com.example.broadcast.OrderBroadcastReceiver1"
             android:enabled="true"
             android:exported="true">
-            <intent-filter android:priority="100"> <!-- 优先级高的先接收广播 -->
+            <intent-filter android:priority="100">
                 <action android:name="com.example.broadcast.ORDER_BROADCAST" />
             </intent-filter>
         </receiver>
@@ -141,7 +141,7 @@
             android:name="com.example.broadcast.OrderBroadcastReceiver2"
             android:enabled="true"
             android:exported="true">
-            <intent-filter android:priority="200">
+            <intent-filter android:priority="200">  <!-- 优先级高的先接收广播 -->
                 <action android:name="com.example.broadcast.ORDER_BROADCAST" />
             </intent-filter>
         </receiver>
