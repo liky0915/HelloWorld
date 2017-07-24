@@ -4,14 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.helloworld.R;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by lester.ding on 7/14/2017.
@@ -29,7 +24,7 @@ public class NewsContentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.news_content_activity_layout);
+        setContentView(R.layout.bp_news_content_activity_layout);
 
         //竖屏的情况下将左边的分割线隐藏掉
         findViewById(R.id.left_split).setVisibility(View.INVISIBLE);

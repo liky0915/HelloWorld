@@ -22,7 +22,7 @@ public class FragmentBestPractice extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_best_practice_layout);
+        setContentView(R.layout.bp_fragment_best_practice_layout);
 
         news_title_list = (RecyclerView) findViewById(R.id.news_title_list);
 

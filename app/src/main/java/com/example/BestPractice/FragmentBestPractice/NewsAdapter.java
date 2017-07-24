@@ -38,7 +38,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
 
     @Override   //指定item的布局文件和点击事件
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_title_item_layout, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.bp_news_title_item_layout, parent, false);
         final ViewHolder holder = new ViewHolder(view);
         holder.title.setOnClickListener(new View.OnClickListener() {
             @Override

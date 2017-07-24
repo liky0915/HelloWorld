@@ -8,7 +8,10 @@
     <!-- 监听系统开机权限 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-    <!-- Android四大组件注册：Activity，Broadcast Receiver，Service，Content Provider -->
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- Android四大组件注册：Activity，Broadcast Receiver，Service，Content Provider -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,7 +19,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".HelloWorld"
             android:label="@string/title_hello_world" />
@@ -63,43 +65,42 @@
         <!-- RecyclerView Demo -->
         <activity
             android:name="com.example.recyclerview.RecyclerViewDemo"
-            android:label="@string/title_recycler_view"/>
+            android:label="@string/title_recycler_view" />
 
         <!-- UIBestPractice 简易聊天界面 -->
         <activity
             android:name="com.example.BestPractice.UIBestPractice.UIBestPractice"
-            android:label="@string/title_ui_best_practice"/>
+            android:label="@string/title_ui_best_practice" />
 
         <!-- Fragment Demo -->
         <activity
             android:name="com.example.fragment.FragmentDemo"
-            android:label="@string/title_fragment_demo"/>
+            android:label="@string/title_fragment_demo" />
         <activity
             android:name="com.example.fragment.FragmentStaticLoad"
-            android:label="@string/title_fragment_static_load"/>
+            android:label="@string/title_fragment_static_load" />
         <activity
             android:name="com.example.fragment.FragmentDynamicLoad"
-            android:label="@string/title_fragment_dynamic_load"/>
+            android:label="@string/title_fragment_dynamic_load" />
         <activity
             android:name="com.example.fragment.FragmentLifeCycle"
-            android:label="@string/title_fragment_life_cycle"/>
+            android:label="@string/title_fragment_life_cycle" />
         <activity
             android:name="com.example.fragment.FragmentCommActivity"
-            android:label="@string/title_fragment_comm_activity"/>
+            android:label="@string/title_fragment_comm_activity" />
 
         <!-- FragmentBestPractice 横竖屏切换不同界面的新闻应用 -->
         <activity
             android:name="com.example.BestPractice.FragmentBestPractice.FragmentBestPractice"
-            android:label="@string/title_fragment_best_practice"/>
+            android:label="@string/title_fragment_best_practice" />
         <activity
             android:name="com.example.BestPractice.FragmentBestPractice.NewsContentActivity"
-            android:label="@string/title_news_content_activity"/>
+            android:label="@string/title_news_content_activity" />
 
         <!-- Broadcast Demo -->
         <activity
             android:name="com.example.broadcast.BroadcastDemo"
-            android:label="@string/title_broadcast_demo">
-        </activity>
+            android:label="@string/title_broadcast_demo" />
 
         <!-- 系统开机广播接收器（静态注册） -->
         <receiver
@@ -115,10 +116,6 @@
         <activity
             android:name="com.example.broadcast.BroadcastSendDemo"
             android:label="@string/title_broadcast_send_demo">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- 标准广播接收 -->
@@ -135,7 +132,7 @@
             android:name="com.example.broadcast.OrderBroadcastReceiver1"
             android:enabled="true"
             android:exported="true">
-            <intent-filter android:priority="100">  <!-- 优先级高的先接收广播 -->
+            <intent-filter android:priority="100"> <!-- 优先级高的先接收广播 -->
                 <action android:name="com.example.broadcast.ORDER_BROADCAST" />
             </intent-filter>
         </receiver>
@@ -148,6 +145,20 @@
                 <action android:name="com.example.broadcast.ORDER_BROADCAST" />
             </intent-filter>
         </receiver>
+
+        <!-- BroadcastBestPractice 强制下线功能 -->
+        <activity
+            android:name="com.example.BestPractice.BroadcastBestPractice.LoginActivity"
+            android:label="@string/title_activity_login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.BestPractice.BroadcastBestPractice.MainActivity"
+            android:label="@string/title_activity_main">
+        </activity>
 
     </application>
 

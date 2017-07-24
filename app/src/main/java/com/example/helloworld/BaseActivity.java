@@ -18,7 +18,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //获取当前实例的类名
-        Log.i(TAG, "Current Activity Name: " + getClass().getSimpleName());
+        Log.i(TAG, "Current Activity Class Name: " + getClass().getSimpleName());
         //将当前正在创建的Activity添加到Activity管理器中
         ActivityCollector.addActivity(this);
     }

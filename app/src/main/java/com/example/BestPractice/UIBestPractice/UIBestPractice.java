@@ -25,7 +25,7 @@ public class UIBestPractice extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.uibest_practice_layout);
+        setContentView(R.layout.bp_uibest_practice_layout);
 
         //初始化
         text = (EditText) findViewById(R.id.text);
