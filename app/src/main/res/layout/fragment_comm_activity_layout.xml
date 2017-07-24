@@ -6,7 +6,7 @@
     <!-- 静态加载 -->
     <fragment
         android:id="@+id/fragment1"
-        android:name="com.example.fragment.Fragment1"
+        android:name="com.example.Fragment.Fragment1"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />
 

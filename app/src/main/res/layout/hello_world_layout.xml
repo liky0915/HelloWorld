@@ -9,7 +9,7 @@
     <include layout="@layout/common_title" />
     -->
     <!-- 插入自定义标题栏控件，带有已定义好的布局和点击事件代码-->
-    <com.example.uicustomviews.TitleLayout
+    <com.example.UICustomViews.TitleLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

@@ -46,13 +46,13 @@
 
         <!-- BaseAdapter Demo -->
         <activity
-            android:name="com.example.adapter.BaseAdapterDemo"
+            android:name="com.example.Adapter.BaseAdapterDemo"
             android:label="@string/title_base_adapter" />
 
         <!-- Widget Demo -->
-        <service android:name="com.example.widget.WidgetService" />
+        <service android:name="com.example.Widget.WidgetService" />
 
-        <receiver android:name="com.example.widget.WidgetProvider">
+        <receiver android:name="com.example.Widget.WidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -64,7 +64,7 @@
 
         <!-- RecyclerView Demo -->
         <activity
-            android:name="com.example.recyclerview.RecyclerViewDemo"
+            android:name="com.example.RecyclerView.RecyclerViewDemo"
             android:label="@string/title_recycler_view" />
 
         <!-- UIBestPractice 简易聊天界面 -->
@@ -74,19 +74,19 @@
 
         <!-- Fragment Demo -->
         <activity
-            android:name="com.example.fragment.FragmentDemo"
+            android:name="com.example.Fragment.FragmentDemo"
             android:label="@string/title_fragment_demo" />
         <activity
-            android:name="com.example.fragment.FragmentStaticLoad"
+            android:name="com.example.Fragment.FragmentStaticLoad"
             android:label="@string/title_fragment_static_load" />
         <activity
-            android:name="com.example.fragment.FragmentDynamicLoad"
+            android:name="com.example.Fragment.FragmentDynamicLoad"
             android:label="@string/title_fragment_dynamic_load" />
         <activity
-            android:name="com.example.fragment.FragmentLifeCycle"
+            android:name="com.example.Fragment.FragmentLifeCycle"
             android:label="@string/title_fragment_life_cycle" />
         <activity
-            android:name="com.example.fragment.FragmentCommActivity"
+            android:name="com.example.Fragment.FragmentCommActivity"
             android:label="@string/title_fragment_comm_activity" />
 
         <!-- FragmentBestPractice 横竖屏切换不同界面的新闻应用 -->
@@ -99,12 +99,12 @@
 
         <!-- Broadcast Demo -->
         <activity
-            android:name="com.example.broadcast.BroadcastDemo"
+            android:name="com.example.Broadcast.BroadcastDemo"
             android:label="@string/title_broadcast_demo" />
 
         <!-- 系统开机广播接收器（静态注册） -->
         <receiver
-            android:name="com.example.broadcast.BootCompleteReceiver"
+            android:name="com.example.Broadcast.BootCompleteReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -114,13 +114,13 @@
 
         <!-- Broadcast Send -->
         <activity
-            android:name="com.example.broadcast.BroadcastSendDemo"
+            android:name="com.example.Broadcast.BroadcastSendDemo"
             android:label="@string/title_broadcast_send_demo">
         </activity>
 
         <!-- 标准广播接收 -->
         <receiver
-            android:name="com.example.broadcast.NormalBroadcastReceiver"
+            android:name="com.example.Broadcast.NormalBroadcastReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -129,7 +129,7 @@
         </receiver>
         <!-- 有序广播接收1 -->
         <receiver
-            android:name="com.example.broadcast.OrderBroadcastReceiver1"
+            android:name="com.example.Broadcast.OrderBroadcastReceiver1"
             android:enabled="true"
             android:exported="true">
             <intent-filter android:priority="100">
@@ -138,7 +138,7 @@
         </receiver>
         <!-- 有序广播接收2 -->
         <receiver
-            android:name="com.example.broadcast.OrderBroadcastReceiver2"
+            android:name="com.example.Broadcast.OrderBroadcastReceiver2"
             android:enabled="true"
             android:exported="true">
             <intent-filter android:priority="200">  <!-- 优先级高的先接收广播 -->

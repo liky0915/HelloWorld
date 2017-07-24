@@ -7,13 +7,13 @@
     	并且静态加载一定要指定id或者tag属性来作为Fragment的唯一标识-->
     <fragment
         android:id="@+id/fragment1"
-        android:name="com.example.fragment.Fragment1"
+        android:name="com.example.Fragment.Fragment1"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />
 
     <fragment
         android:id="@+id/fragment2"
-        android:name="com.example.fragment.Fragment2"
+        android:name="com.example.Fragment.Fragment2"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
