@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <scale
+        android:duration="3000"
+        android:fromXScale="0.0"
+        android:fromYScale="0.0"
+        android:toXScale="1.0"
+        android:toYScale="1.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fillAfter="false"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator" >
+    </scale>
+    <!--缩放动画
+        fillAfter: 缩放结束时图片是否回到原始大小，此处由于动画结束时图片已是原始状态，所以true和false没有实际影响
+        fromXScale：x轴起始位置（y轴同理）
+        toXScale：x轴缩放后位置（y轴同理）
+        interpolator：动画插入器，此处选择的是先加速再减速的效果，系统自带很多种效果可选
+        pivotX：x轴缩放起始点（y轴同理），此处xy都设置50%即为从图片中心点开始缩放效果
+    -->
+</set>

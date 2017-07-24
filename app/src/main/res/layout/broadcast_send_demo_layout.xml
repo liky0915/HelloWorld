@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/normal_bc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送一个标准广播"
+        android:onClick="doClick"/>
+
+    <Button
+        android:id="@+id/order_bc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送一个有序广播"
+        android:onClick="doClick" />
+
+    <Button
+        android:id="@+id/local_bc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送一个本地广播"
+        android:onClick="doClick" />
+
+</LinearLayout>

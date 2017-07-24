@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <scale
+        android:duration="3000"
+        android:fromXScale="0.0"
+        android:fromYScale="0.0"
+        android:toXScale="1.0"
+        android:toYScale="1.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fillAfter="false"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator" >
+    </scale>
+    <rotate
+        android:startOffset="3000"
+        android:duration="3000"
+        android:fromDegrees="90"
+        android:toDegrees="-360"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator">
+    </rotate>
+
+    <!--组合动画效果
+        1.图片由点缩放至原始大小，用时3秒
+        2.图片逆时针旋转450度，用时3秒，延迟3秒开始
+        注： 虽然旋转是延迟3秒开始，但初始动画状态从动画集效果一开始就已经出现了，即图片在缩放一开始时就已经保持顺时针90度角，
+            直到三秒后才开始旋转，这也是动画集方式和动画监听方式不同处之一
+    -->
+</set>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content">
+    <!--这里将width设为固定值是因为每个item的文字长度不一定一样，
+        如果设置为wrap_content会导致长长短短不好看，
+        此外如果设置成match_parent又会过长，导致一个item就占用了整个屏幕-->
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_below="@+id/image" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_below="@+id/title" />
+
+</RelativeLayout>

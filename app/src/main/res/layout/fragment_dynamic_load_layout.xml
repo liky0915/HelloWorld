@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!--此方法为静态加载Fragment, 需加载的Fragment在此处已被写死(属性name) 
+    	并且静态加载一定要指定id或者tag属性来作为Fragment的唯一标识-->
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.example.fragment.Fragment1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

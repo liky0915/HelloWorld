@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--使用merge后，该布局类似与FrameLayout布局，子控件图层会叠加，所以可以取代之，
+	但前提是原本的FrameLayout布局不需要设置backgroud或者padding等属性，因为merge后不支持-->
+<!--当该布局被其他布局Include时，根节点merge会被忽略，仅仅子节点会被合并到其他布局中去
+	且具有FrameLayout布局样式，即子节点图层会叠加。(降低UI布局的嵌套层次) -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ProgressBar 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="请稍后..."/>
+</merge>

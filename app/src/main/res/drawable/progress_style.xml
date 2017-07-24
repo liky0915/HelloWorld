@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:id="@android:id/background">
+        <shape>
+            <!-- android:radius表示长方形四个角的半径，
+            	当然也可以每个角单独设定，后面单独设定的圆角半径会覆盖android:radius -->
+            <corners
+                android:radius="15dip"
+				android:topLeftRadius="15dp"  
+				android:topRightRadius="15dp"  
+				android:bottomLeftRadius="15dp"  
+				android:bottomRightRadius="15dp"  />
+            <solid android:color="#88000000" />
+        </shape>
+    </item>
+    
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="15dip" />
+                <gradient
+                        android:startColor="#B9A4FF"
+                        android:centerColor="#C6B7FF"
+                        android:centerY="0.75"
+                        android:endColor="#C3B2FF"
+                        android:angle="0"
+                />
+            </shape>
+        </clip>
+    </item>
+    
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="15dip" />
+                <!-- gradient: 渐变 -->
+                <!-- android:angle="90"表示渐变的起始位置，这个值必须为45的倍数，包括0，
+                	0表示从左往右渐变，逆时针旋转，依次是45，90，135.....，
+                	90表示从下往上渐变，270表示从上往下渐变，剩下的大家依次去推理 -->
+                <!-- type表示渐变的类型有三种，分别是linear（线性变化）,radial（辐射渐变）以及sweep（扫描渐变）
+					当type为radial时，我们要设置android:gradientRadius="(整数)"，这个表示渐变的半径（线性渐变和扫描渐变不需要设置）-->
+                <gradient
+                        android:startColor="#57E8FF"
+                        android:centerColor="#74EBFF"
+                        android:centerY="0.75"
+                        android:endColor="#8EEFFF"
+                        android:angle="0"
+                        android:type="linear"
+                />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

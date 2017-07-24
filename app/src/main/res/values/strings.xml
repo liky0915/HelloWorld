@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="title_hello_world">HelloWorld</string>
+    <string name="title_second_activity">SecondActivity</string>
+    <string name="title_first_activity">FirstActivity</string>
+    <string name="title_third_activity">ThirdActivity</string>
+    <string name="title_base_adapter">BaseAdapter</string>
+    <string name="title_recycler_view">RecyclerView</string>
+    <string name="title_ui_best_practice">UIBestPractice</string>
+    <string name="title_fragment_demo">FragmentDemo</string>
+    <string name="title_fragment_static_load">FragmentStaticLoad</string>
+    <string name="title_fragment_dynamic_load">FragmentDynamicLoad</string>
+    <string name="title_fragment_comm_activity">FragmentCommActivity</string>
+    <string name="title_fragment_life_cycle">FragmentLifeCycle</string>
+    <string name="title_fragment_best_practice">FragmentBestPractice</string>
+    <string name="title_news_content_activity">NewsContentActivity</string>
+    <string name="title_broadcast_demo">BroadcastDemo</string>
+    <string name="title_broadcast_send_demo">BroadcastSendDemo</string>
+
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="140dp"
+    android:minHeight="20dp"
+    android:initialLayout="@layout/widget_demo_layout"
+    android:updatePeriodMillis="86400000">
+    <!-- 刷新时间系统默认最少为30分钟，如果设置的时间不满30分钟也强制30分钟刷新，手动刷新除外 -->
+</appwidget-provider>
