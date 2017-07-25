@@ -150,14 +150,25 @@
         <activity
             android:name="com.example.BestPractice.BroadcastBestPractice.LoginActivity"
             android:label="@string/title_activity_login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.BestPractice.BroadcastBestPractice.MainActivity"
             android:label="@string/title_activity_main">
+        </activity>
+
+        <!-- save data to file -->
+        <activity
+            android:name="com.example.DataStore.File.FileOutput"
+            android:label="@string/title_file_output">
+        </activity>
+        <!-- load data from file -->
+        <activity
+            android:name="com.example.DataStore.File.FileInput"
+            android:label="@string/title_file_input">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
     </application>

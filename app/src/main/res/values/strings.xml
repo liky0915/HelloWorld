@@ -18,5 +18,7 @@
     <string name="title_broadcast_send_demo">BroadcastSendDemo</string>
     <string name="title_activity_login">BroadcastBestPractice</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="title_file_output">FileOutput</string>
+    <string name="title_file_input">FileInput</string>
 
 </resources>
