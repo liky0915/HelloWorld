@@ -7,5 +7,6 @@
         android:id="@+id/save_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save Data to SharedPreferences" />
+        android:text="Save Data to SharedPreferences"
+        android:textAllCaps="false"/>
 </LinearLayout>

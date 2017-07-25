@@ -171,6 +171,16 @@
         <activity
             android:name="com.example.DataStore.SharedPreferences.SharedPrefsOutput"
             android:label="@string/title_shared_prefs_output">
+        </activity>
+        <!-- load data from SharedPreferences -->
+        <activity
+            android:name="com.example.DataStore.SharedPreferences.SharedPrefsInput"
+            android:label="@string/title_shared_prefs_input">
+        </activity>
+        <!-- save password via SharedPreferences -->
+        <activity
+            android:name="com.example.DataStore.SharedPreferences.SavePassword"
+            android:label="@string/title_save_password">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
