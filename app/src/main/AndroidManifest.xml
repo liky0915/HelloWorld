@@ -165,6 +165,12 @@
         <activity
             android:name="com.example.DataStore.File.FileInput"
             android:label="@string/title_file_input">
+        </activity>
+
+        <!-- save data to SharedPreferences -->
+        <activity
+            android:name="com.example.DataStore.SharedPreferences.SharedPrefsOutput"
+            android:label="@string/title_shared_prefs_output">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

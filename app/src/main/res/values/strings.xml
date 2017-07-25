@@ -20,5 +20,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_file_output">FileOutput</string>
     <string name="title_file_input">FileInput</string>
+    <string name="title_shared_prefs_output">SharedPreferencesOutput</string>
 
 </resources>
