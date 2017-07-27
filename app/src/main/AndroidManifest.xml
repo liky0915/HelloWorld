@@ -36,7 +36,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="SEC_ACT" />
 
-                <data android:scheme="http" /> <!-- 此处严格限制Intent中所带的数据的协议部分必须为http开头，否则不与响应 -->
+                <data android:scheme="http" /> <!-- 此处严格限制Intent中setData所带的数据的协议部分必须为http开头，否则不与响应 -->
             </intent-filter>
         </activity>
         <activity
@@ -181,6 +181,12 @@
         <activity
             android:name="com.example.DataStore.SharedPreferences.SavePassword"
             android:label="@string/title_save_password">
+        </activity>
+
+        <!-- SQLite Demo -->
+        <activity
+            android:name="com.example.DataStore.SQLite.SQLiteDemo"
+            android:label="@string/title_sqlite_demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
