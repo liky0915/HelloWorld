@@ -24,5 +24,6 @@
     <string name="title_shared_prefs_input">SharedPreferencesInput</string>
     <string name="title_save_password">SavePassword</string>
     <string name="title_sqlite_demo">SQLiteDemo</string>
+    <string name="title_litepal_demo">LitePalDemo</string>
 
 </resources>
