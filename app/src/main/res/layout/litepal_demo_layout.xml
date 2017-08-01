@@ -38,4 +38,9 @@
         android:layout_height="wrap_content"
         android:text="Query Data"
         android:onClick="doClick"/>
+
+    <TextView
+        android:id="@+id/query_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
