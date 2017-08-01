@@ -25,5 +25,6 @@
     <string name="title_save_password">SavePassword</string>
     <string name="title_sqlite_demo">SQLiteDemo</string>
     <string name="title_litepal_demo">LitePalDemo</string>
+    <string name="title_runtime_permission">RuntimePermission</string>
 
 </resources>

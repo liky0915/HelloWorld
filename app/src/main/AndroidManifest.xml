@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- 监听系统开机权限 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 拨打电话权限（危险级别权限：需运行时授权） -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <!-- Android四大组件注册：Activity，Broadcast Receiver，Service，Content Provider -->
     <application
@@ -191,6 +193,11 @@
         <activity
             android:name="com.example.DataStore.LitePal.LitePalDemo"
             android:label="@string/title_litepal_demo">
+        </activity>
+
+        <activity
+            android:name="com.example.ContentProvider.RuntimePermission"
+            android:label="@string/title_runtime_permission">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
