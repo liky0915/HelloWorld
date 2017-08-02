@@ -9,6 +9,10 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <!-- 拨打电话权限（危险级别权限：需运行时授权） -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 读取联系人权限（危险级别权限：需运行时授权）-->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!-- 写入联系人权限（危险级别权限：需运行时授权）-->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
 
     <!-- Android四大组件注册：Activity，Broadcast Receiver，Service，Content Provider -->
     <application
@@ -195,9 +199,16 @@
             android:label="@string/title_litepal_demo">
         </activity>
 
+        <!-- 运行时权限授权 -->
         <activity
             android:name="com.example.ContentProvider.RuntimePermission"
             android:label="@string/title_runtime_permission">
+        </activity>
+
+        <!-- 读取/写入联系人 -->
+        <activity
+            android:name="com.example.ContentProvider.Contacts"
+            android:label="@string/title_contacts">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
