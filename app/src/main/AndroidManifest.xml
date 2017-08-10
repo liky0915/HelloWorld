@@ -9,10 +9,10 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <!-- 拨打电话权限（危险级别权限：需运行时授权） -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <!-- 读取联系人权限（危险级别权限：需运行时授权）-->
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <!-- 写入联系人权限（危险级别权限：需运行时授权）-->
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <!-- 读取联系人权限（危险级别权限：需运行时授权） -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 写入联系人权限（危险级别权限：需运行时授权） -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
     <!-- Android四大组件注册：Activity，Broadcast Receiver，Service，Content Provider -->
     <application
@@ -97,6 +97,7 @@
         <activity
             android:name="com.example.BestPractice.FragmentBestPractice.FragmentBestPractice"
             android:label="@string/title_fragment_best_practice" />
+
         <activity
             android:name="com.example.BestPractice.FragmentBestPractice.NewsContentActivity"
             android:label="@string/title_news_content_activity" />
@@ -119,8 +120,7 @@
         <!-- Broadcast Send -->
         <activity
             android:name="com.example.Broadcast.BroadcastSendDemo"
-            android:label="@string/title_broadcast_send_demo">
-        </activity>
+            android:label="@string/title_broadcast_send_demo"></activity>
 
         <!-- 标准广播接收 -->
         <receiver
@@ -131,6 +131,7 @@
                 <action android:name="com.example.broadcast.NORMAL_BROADCAST" />
             </intent-filter>
         </receiver>
+
         <!-- 有序广播接收1 -->
         <receiver
             android:name="com.example.Broadcast.OrderBroadcastReceiver1"
@@ -140,12 +141,13 @@
                 <action android:name="com.example.broadcast.ORDER_BROADCAST" />
             </intent-filter>
         </receiver>
+
         <!-- 有序广播接收2 -->
         <receiver
             android:name="com.example.Broadcast.OrderBroadcastReceiver2"
             android:enabled="true"
             android:exported="true">
-            <intent-filter android:priority="200">  <!-- 优先级高的先接收广播 -->
+            <intent-filter android:priority="200"> <!-- 优先级高的先接收广播 -->
                 <action android:name="com.example.broadcast.ORDER_BROADCAST" />
             </intent-filter>
         </receiver>
@@ -153,18 +155,18 @@
         <!-- BroadcastBestPractice 强制下线功能 -->
         <activity
             android:name="com.example.BestPractice.BroadcastBestPractice.LoginActivity"
-            android:label="@string/title_activity_login">
-        </activity>
+            android:label="@string/title_activity_login"></activity>
+
         <activity
             android:name="com.example.BestPractice.BroadcastBestPractice.MainActivity"
-            android:label="@string/title_activity_main">
-        </activity>
+            android:label="@string/title_activity_main"></activity>
 
         <!-- save data to file -->
         <activity
             android:name="com.example.DataStore.File.FileOutput"
             android:label="@string/title_file_output">
         </activity>
+
         <!-- load data from file -->
         <activity
             android:name="com.example.DataStore.File.FileInput"
@@ -176,16 +178,17 @@
             android:name="com.example.DataStore.SharedPreferences.SharedPrefsOutput"
             android:label="@string/title_shared_prefs_output">
         </activity>
+
         <!-- load data from SharedPreferences -->
         <activity
             android:name="com.example.DataStore.SharedPreferences.SharedPrefsInput"
             android:label="@string/title_shared_prefs_input">
         </activity>
+
         <!-- save password via SharedPreferences -->
         <activity
             android:name="com.example.DataStore.SharedPreferences.SavePassword"
-            android:label="@string/title_save_password">
-        </activity>
+            android:label="@string/title_save_password"></activity>
 
         <!-- SQLite Demo -->
         <activity
@@ -202,8 +205,7 @@
         <!-- 运行时权限授权 -->
         <activity
             android:name="com.example.ContentProvider.RuntimePermission"
-            android:label="@string/title_runtime_permission">
-        </activity>
+            android:label="@string/title_runtime_permission"></activity>
 
         <!-- 读取/写入联系人 -->
         <activity
@@ -215,6 +217,12 @@
             </intent-filter>
         </activity>
 
+        <provider
+            android:name="com.example.ContentProvider.DatabaseProvider"
+            android:authorities="com.example.helloworld.provider"
+            android:enabled="true"
+            android:exported="true">
+        </provider>
     </application>
 
 </manifest>

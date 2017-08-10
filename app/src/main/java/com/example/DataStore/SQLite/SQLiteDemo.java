@@ -37,7 +37,7 @@ public class SQLiteDemo extends AppCompatActivity {
         queryResult = (TextView) findViewById(R.id.query_result);
 
         //定义数据库名Books.db及其表结构（MyDatabaseHelper内定义），并非实际创建数据库
-        dbHelper = new MyDatabaseHelper(this, "Books.db", null, 2);
+        dbHelper = new MyDatabaseHelper(this, "Books.db", null, 1);
         //实例化数据装载对象
         values = new ContentValues();
 

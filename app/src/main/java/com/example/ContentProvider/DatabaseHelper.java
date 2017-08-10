@@ -1,4 +1,4 @@
-package com.example.DataStore.SQLite;
+package com.example.ContentProvider;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,7 +9,7 @@ import android.widget.Toast;
  * Created by lester.ding on 7/26/2017.
  */
 
-public class MyDatabaseHelper extends SQLiteOpenHelper {
+public class DatabaseHelper extends SQLiteOpenHelper {
 
     private String CREATE_BOOK = "create table if not exists Book ("
             + "id integer primary key autoincrement,"
@@ -26,7 +26,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private Context context;
 
     //构造函数
-    public MyDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
         this.context = context;
     }
@@ -36,7 +36,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_BOOK);
         db.execSQL(CREATE_CATEGORY);
-        Toast.makeText(context, "Database created successfully", Toast.LENGTH_SHORT).show();
+        //跨程序访问时不能直接使用Toast
+        //Toast.makeText(context, "Database created successfully", Toast.LENGTH_SHORT).show();
     }
 
     //数据库版本变更时被调用，一般用于备份数据库

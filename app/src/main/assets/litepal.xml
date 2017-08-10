@@ -3,7 +3,7 @@
     <!-- 定义数据库名 -->
     <dbname value="Books_LitePal" />
     <!-- 数据库版本 -->
-    <version value="2" />   <!-- 每次表结构有改动，版本号需+1 -->
+    <version value="1" />   <!-- 每次表结构有改动，版本号需+1 -->
 
     <!-- list内定义映射模型 -->
     <list>
