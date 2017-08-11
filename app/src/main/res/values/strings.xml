@@ -27,5 +27,6 @@
     <string name="title_litepal_demo">LitePalDemo</string>
     <string name="title_runtime_permission">RuntimePermission</string>
     <string name="title_contacts">ContactsList</string>
+    <string name="title_notification_demo">NotificationDemo</string>
 
 </resources>

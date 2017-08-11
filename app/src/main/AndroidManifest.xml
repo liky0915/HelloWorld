@@ -13,6 +13,8 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <!-- 写入联系人权限（危险级别权限：需运行时授权） -->
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 手机震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <!-- Android四大组件注册：Activity，Broadcast Receiver，Service，Content Provider -->
     <application
@@ -211,10 +213,6 @@
         <activity
             android:name="com.example.ContentProvider.Contacts"
             android:label="@string/title_contacts">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <provider
@@ -223,6 +221,18 @@
             android:enabled="true"
             android:exported="true">
         </provider>
+
+        <!-- 简单Notification（通知）-->
+        <activity
+            android:name="com.example.Notification.NotificationDemo"
+            android:label="@string/title_notification_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
     </application>
 
 </manifest>
