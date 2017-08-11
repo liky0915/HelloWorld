@@ -30,9 +30,9 @@ public class RemoteDatabaseConnection extends Activity {
 
     public void doClick(View v){
         Uri uri, newUri;
+        ContentValues values = new ContentValues();
         switch (v.getId()){
             case R.id.add_data:
-                ContentValues values = new ContentValues();
                 //向Book表中插入数据
                 uri = Uri.parse(AUTHORITY+"/book");
                 values.clear();
@@ -80,9 +80,31 @@ public class RemoteDatabaseConnection extends Activity {
                 }
                 result.setText(builder.toString());
                 break;
+
             case R.id.update_data:
+                //Book表更新数据
+                uri = Uri.parse(AUTHORITY+"/book/"+newBookId);
+                values.clear();
+                values.put("name", "我的世界");
+                values.put("author", "Big Daddy");
+                values.put("pages", 344);
+                values.put("price", 29.6);
+                getContentResolver().update(uri, values, null, null);
+                //Category表更新数据
+                uri = Uri.parse(AUTHORITY+"/category/"+newCategoryId);
+                values.clear();
+                values.put("category_name", "Others");
+                values.put("category_code", 99);
+                getContentResolver().update(uri, values, null, null);
                 break;
+
             case R.id.delete_data:
+                //Book表删除数据
+                uri = Uri.parse(AUTHORITY+"/book/"+newBookId);
+                getContentResolver().delete(uri, null, null);
+                //Category表删除数据
+                uri = Uri.parse(AUTHORITY+"/category/"+newCategoryId);
+                getContentResolver().delete(uri, null, null);
                 break;
         }
     }

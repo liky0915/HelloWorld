@@ -31,6 +31,7 @@ public class BaseContentProvider extends ContentProvider {
     public boolean onCreate() {
         return false;
     }
+
     //从CP中查询数据
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
@@ -48,6 +49,7 @@ public class BaseContentProvider extends ContentProvider {
         }
         return null;
     }
+
     //向CP中添加一条数据
     @Override
     public Uri insert(Uri uri, ContentValues values) {
@@ -65,6 +67,7 @@ public class BaseContentProvider extends ContentProvider {
         }
         return null;
     }
+
     //从CP中删除数据
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
@@ -82,6 +85,7 @@ public class BaseContentProvider extends ContentProvider {
         }
         return 0;
     }
+
     //更新CP中已有的数据
     @Override
     public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
@@ -99,6 +103,7 @@ public class BaseContentProvider extends ContentProvider {
         }
         return 0;
     }
+
     //根据传入的内容URI来返回相应的MIME类型
     @Override
     public String getType(Uri uri) {

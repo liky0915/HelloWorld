@@ -7,6 +7,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 
+/*
+    跨程序访问数据实现：将本数据库内（Books_Provider.db）数据共享给其他程序（MFA中的Activity：ContentProvider）进行访问
+*/
+
 public class DatabaseProvider extends ContentProvider {
     public static final int BOOK_DIR = 0;
     public static final int BOOK_ITEM = 1;
@@ -25,12 +29,10 @@ public class DatabaseProvider extends ContentProvider {
     }
     private DatabaseHelper dbHelper;
 
-    /*
-        跨程序访问数据实现：将本数据库内（Books_Provider.db）数据共享给其他程序（MFA中的Activity：ContentProvider）进行访问
-     */
     @Override
     public boolean onCreate() {
         // TODO: Implement this to initialize your content provider on startup.
+        //完成对数据库的创建和升级，返回true表示初始化成功，只有当ContentResolver访问数据时才会被初始化
         dbHelper = new DatabaseHelper(getContext(), "Books_Provider.db", null, 1);
         return true;
     }
@@ -111,7 +113,7 @@ public class DatabaseProvider extends ContentProvider {
 
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
-        // Implement this to handle requests to delete one or more rows.
+        // TODO: Implement this to handle requests to delete one or more rows.
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         int deletedRows = 0;
         switch (uriMatcher.match(uri)){
