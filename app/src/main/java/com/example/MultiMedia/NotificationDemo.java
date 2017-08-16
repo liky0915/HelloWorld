@@ -1,4 +1,4 @@
-package com.example.Notification;
+package com.example.MultiMedia;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -8,7 +8,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.NotificationCompat;
 import android.view.View;
@@ -41,7 +40,7 @@ public class NotificationDemo extends AppCompatActivity {
                 //创建PendingIntent对象，以实现点击通知后跳转操作（PendingIntent对象需要一个明确的Intent对象作为其参数）
                 Intent intent = new Intent(NotificationDemo.this, HelloWorld.class);
                 PendingIntent pi = PendingIntent.getActivity(NotificationDemo.this, 0, intent, 0);
-                //创建一个通知对象，NotificationCompat是版本兼容的通知类
+                //创建 一个通知对象，NotificationCompat是版本兼容的通知类
                 Notification notification = new NotificationCompat.Builder(NotificationDemo.this)
                         //通知抬头
                         .setContentTitle("新通知")
@@ -55,7 +54,7 @@ public class NotificationDemo extends AppCompatActivity {
                         .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
                         //点击通知后跳转的意图
                         .setContentIntent(pi)
-                        //点击通知后自动取消掉该通知
+                        //点击通知后状态栏自动取消掉该通知
                         .setAutoCancel(true)
                         //当通知到来时的提示音
                         .setSound(Uri.fromFile(new File("/system/media/audio/ringtones/Luna.ogg")))

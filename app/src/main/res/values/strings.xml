@@ -28,5 +28,6 @@
     <string name="title_runtime_permission">RuntimePermission</string>
     <string name="title_contacts">ContactsList</string>
     <string name="title_notification_demo">NotificationDemo</string>
+    <string name="title_camera_album">CameraAlbum</string>
 
 </resources>
