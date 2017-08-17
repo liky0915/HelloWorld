@@ -17,6 +17,8 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <!-- 读写SD卡内容权限（另外在4.4系统之前访问应用关联目录也需要申请此权限） -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <!-- Android四大组件注册：Activity，Broadcast Receiver，Service，Content Provider -->
     <application
@@ -255,12 +257,17 @@
         <activity
             android:name="com.example.MultiMedia.PlayVideo"
             android:label="@string/title_play_video">
+        </activity>
+
+        <!-- WebView 简易嵌入式浏览器Demo-->
+        <activity
+            android:name="com.example.HttpConnection.WebViewDemo"
+            android:label="@string/title_web_view_demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
 
     </application>
 

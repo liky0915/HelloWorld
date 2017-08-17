@@ -29,7 +29,7 @@ public class PlayVideo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.play_video_layout);
-        //
+        //初始化
         play = (Button) findViewById(R.id.play);
         pause = (Button) findViewById(R.id.pause);
         replay = (Button) findViewById(R.id.replay);

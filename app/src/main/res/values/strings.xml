@@ -31,5 +31,6 @@
     <string name="title_camera_album">CameraAlbum</string>
     <string name="title_play_audio">PlayAudio</string>
     <string name="title_play_video">PlayVideo</string>
+    <string name="title_web_view_demo">WebViewDemo</string>
 
 </resources>
