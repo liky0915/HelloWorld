@@ -29,5 +29,7 @@
     <string name="title_contacts">ContactsList</string>
     <string name="title_notification_demo">NotificationDemo</string>
     <string name="title_camera_album">CameraAlbum</string>
+    <string name="title_play_audio">PlayAudio</string>
+    <string name="title_play_video">PlayVideo</string>
 
 </resources>

@@ -234,10 +234,6 @@
         <activity
             android:name="com.example.MultiMedia.CameraAlbum"
             android:label="@string/title_camera_album">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -249,6 +245,22 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"/>
         </provider>
+
+        <!-- 播放音频文件 -->
+        <activity
+            android:name="com.example.MultiMedia.PlayAudio"
+            android:label="@string/title_play_audio">
+        </activity>
+        <!-- 播放视频文件 -->
+        <activity
+            android:name="com.example.MultiMedia.PlayVideo"
+            android:label="@string/title_play_video">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
 
     </application>
 
