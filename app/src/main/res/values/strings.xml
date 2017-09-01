@@ -32,5 +32,7 @@
     <string name="title_play_audio">PlayAudio</string>
     <string name="title_play_video">PlayVideo</string>
     <string name="title_web_view_demo">WebViewDemo</string>
+    <string name="title_http_url_connection">HttpURLConnection</string>
+    <string name="title_ok_http">OkHttp</string>
 
 </resources>
