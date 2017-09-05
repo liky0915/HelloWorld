@@ -34,5 +34,7 @@
     <string name="title_web_view_demo">WebViewDemo</string>
     <string name="title_http_url_connection">HttpURLConnection</string>
     <string name="title_ok_http">OkHttp</string>
+    <string name="title_parse_xml_with_pull_demo">ParseXMLWithPullDemo</string>
+    <string name="title_parse_xml_with_sax_demo">ParseXMLWithSAXDemo</string>
 
 </resources>

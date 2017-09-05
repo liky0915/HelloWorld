@@ -275,6 +275,18 @@
         <activity
             android:name="com.example.HttpConnection.OkHttpDemo"
             android:label="@string/title_ok_http">
+        </activity>
+
+        <!-- Pull解析方式解析XML格式数据 -->
+        <activity
+            android:name="com.example.HttpConnection.ParseXMLWithPullDemo"
+            android:label="@string/title_parse_xml_with_pull_demo">
+        </activity>
+
+        <!-- SAX解析方式解析XML格式数据 -->
+        <activity
+            android:name="com.example.HttpConnection.ParseXMLWithSAXDemo"
+            android:label="@string/title_parse_xml_with_sax_demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
