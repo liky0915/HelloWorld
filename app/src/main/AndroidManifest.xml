@@ -287,6 +287,12 @@
         <activity
             android:name="com.example.HttpConnection.ParseXMLWithSAXDemo"
             android:label="@string/title_parse_xml_with_sax_demo">
+        </activity>
+
+        <!-- 使用JSONObject解析JSON格式数据 -->
+        <activity
+            android:name="com.example.HttpConnection.ParseJSONWithJSONObjectDemo"
+            android:label="@string/title_parse_json_with_jsonobject_demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

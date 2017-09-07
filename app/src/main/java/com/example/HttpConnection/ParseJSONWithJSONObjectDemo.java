@@ -1,34 +1,25 @@
 package com.example.HttpConnection;
 
 import android.os.Bundle;
-import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.helloworld.R;
 
-import org.xml.sax.InputSource;
-import org.xml.sax.XMLReader;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringReader;
-import java.util.Properties;
-
-import javax.xml.parsers.SAXParserFactory;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * Created by lester.ding on 9/5/2017.
+ * Created by lester.ding on 9/7/2017.
  */
 
-public class ParseXMLWithSAXDemo extends AppCompatActivity {
+public class ParseJSONWithJSONObjectDemo extends AppCompatActivity {
 
     private Button sendRequest;
     private TextView responseText;
@@ -43,7 +34,7 @@ public class ParseXMLWithSAXDemo extends AppCompatActivity {
         sendRequest = (Button) findViewById(R.id.send_request);
         responseText = (TextView) findViewById(R.id.response_text);
         //读取配置文件内容来获取本地服务器地址
-        urlAddress = getString(R.string.url_httpconnection_xml);
+        urlAddress = getString(R.string.url_httpconnection_json);
         //点击按钮发送请求
         sendRequest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +59,7 @@ public class ParseXMLWithSAXDemo extends AppCompatActivity {
                     Response response = client.newCall(request).execute();
                     String responseData = response.body().string();
                     //解析服务器返回的数据
-                    String parsedText = parseXMLWithSAX(responseData);
+                    String parsedText = parseJSONWithJSONObject(responseData);
                     //回调主线程将解析后的数据更新到UI上
                     showResponse(parsedText);
                 }catch(Exception e){
@@ -78,18 +69,19 @@ public class ParseXMLWithSAXDemo extends AppCompatActivity {
         }).start();
     }
 
-    private String parseXMLWithSAX(String responseData) {
+    private String parseJSONWithJSONObject(String responseData) {
+        StringBuilder parsedText = new StringBuilder();
         try{
-            SAXParserFactory factory = SAXParserFactory.newInstance();
-            XMLReader reader = factory.newSAXParser().getXMLReader();
-            ContentHandler handler = new ContentHandler();
-            //将ContentHandler的实例设置到Reader中，ContentHandler其实就是规定Reader如何解析XML
-            reader.setContentHandler(handler);
-            //传入服务器返回的XML数据并开始执行解析
-            reader.parse(new InputSource(new StringReader(responseData)));
-            //返回解析后的数据(此数据存在Handler的parsedText属性中）
-            return handler.parsedText.toString();
-        }catch(Exception e){
+            JSONArray array = new JSONArray(responseData);
+            for(int i=0; i<array.length(); i++){
+                JSONObject object = array.getJSONObject(i);
+                String id = object.getString("id");
+                String name = object.getString("name");
+                String version = object.getString("version");
+                parsedText.append("id is "+id+"; name is "+name+"; version is "+version+";\r\n");
+            }
+            return parsedText.toString();
+        } catch (Exception e){
             e.printStackTrace();
         }
         return null;

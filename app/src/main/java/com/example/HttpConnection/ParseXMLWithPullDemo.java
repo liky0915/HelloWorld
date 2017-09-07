@@ -27,6 +27,7 @@ public class ParseXMLWithPullDemo extends AppCompatActivity {
 
     private Button sendRequest;
     private TextView responseText;
+    private String urlAddress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,9 @@ public class ParseXMLWithPullDemo extends AppCompatActivity {
         //初始化
         sendRequest = (Button) findViewById(R.id.send_request);
         responseText = (TextView) findViewById(R.id.response_text);
-
+        //读取配置文件内容来获取本地服务器地址
+        urlAddress = getString(R.string.url_httpconnection_xml);
+        //点击按钮发送请求
         sendRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +57,7 @@ public class ParseXMLWithPullDemo extends AppCompatActivity {
                     OkHttpClient client = new OkHttpClient();
                     //创建请求对象并添加请求内容（连缀方式）
                     Request request = new Request.Builder()
-                            .url("http://192.168.70.50:8080/MyAJS/xml/get_data.xml")
+                            .url(urlAddress)
                             .build();
                     //客户端发起请求并接受返回结果
                     Response response = client.newCall(request).execute();
