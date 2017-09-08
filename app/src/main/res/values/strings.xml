@@ -39,5 +39,7 @@
     <string name="title_parse_xml_with_pull_demo">ParseXMLWithPullDemo</string>
     <string name="title_parse_xml_with_sax_demo">ParseXMLWithSAXDemo</string>
     <string name="title_parse_json_with_jsonobject_demo">ParseJSONWithJSONObjectDemo</string>
+    <string name="title_parse_json_with_gson_demo">ParseJSONWithGSONDemo</string>
+    <string name="title_http_best_practice">HttpBestPractice</string>
 
 </resources>

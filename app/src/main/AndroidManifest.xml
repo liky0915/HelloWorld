@@ -293,6 +293,18 @@
         <activity
             android:name="com.example.HttpConnection.ParseJSONWithJSONObjectDemo"
             android:label="@string/title_parse_json_with_jsonobject_demo">
+        </activity>
+
+        <!-- 使用GSON解析JSON格式数据 -->
+        <activity
+            android:name="com.example.HttpConnection.ParseJSONWithGSONDemo"
+            android:label="@string/title_parse_json_with_gson_demo">
+        </activity>
+
+        <!-- 网路请求最佳实例（JAVA回调机制） -->
+        <activity
+            android:name="com.example.BestPractice.HttpBestPractice.HttpBestPractice"
+            android:label="@string/title_http_best_practice">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
