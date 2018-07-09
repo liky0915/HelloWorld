@@ -29,35 +29,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".HelloWorld"
-            android:label="@string/title_hello_world" />
+            android:label="@string/title_hello_world">
+        </activity>
+
         <activity
             android:name=".FirstActivity"
             android:label="@string/title_first_activity"
-            android:launchMode="standard" />
+            android:launchMode="standard">
+        </activity>
+
         <activity
             android:name=".SecondActivity"
             android:label="@string/title_second_activity"
             android:launchMode="singleInstance">
             <intent-filter> <!-- 隐式Intent响应 -->
                 <action android:name="START" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="SEC_ACT" />
-
                 <data android:scheme="http" /> <!-- 此处严格限制Intent中setData所带的数据的协议部分必须为http开头，否则不与响应 -->
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ThirdActivity"
             android:label="@string/title_third_activity"
-            android:launchMode="singleTask" />
+            android:launchMode="singleTask">
+        </activity>
 
         <!-- BaseAdapter Demo -->
         <activity
             android:name="com.example.Adapter.BaseAdapterDemo"
-            android:label="@string/title_base_adapter" />
+            android:label="@string/title_base_adapter">
+
+        </activity>
 
         <!-- Widget Demo -->
         <service android:name="com.example.Widget.WidgetService" />
@@ -75,7 +82,9 @@
         <!-- RecyclerView Demo -->
         <activity
             android:name="com.example.RecyclerView.RecyclerViewDemo"
-            android:label="@string/title_recycler_view" />
+            android:label="@string/title_recycler_view">
+
+        </activity>
 
         <!-- UIBestPractice 简易聊天界面 -->
         <activity
@@ -85,7 +94,10 @@
         <!-- Fragment Demo -->
         <activity
             android:name="com.example.Fragment.FragmentDemo"
-            android:label="@string/title_fragment_demo" />
+            android:label="@string/title_fragment_demo">
+
+        </activity>
+
         <activity
             android:name="com.example.Fragment.FragmentStaticLoad"
             android:label="@string/title_fragment_static_load" />
@@ -97,7 +109,8 @@
             android:label="@string/title_fragment_life_cycle" />
         <activity
             android:name="com.example.Fragment.FragmentCommActivity"
-            android:label="@string/title_fragment_comm_activity" />
+            android:label="@string/title_fragment_comm_activity" >
+        </activity>
 
         <!-- FragmentBestPractice 横竖屏切换不同界面的新闻应用 -->
         <activity
@@ -108,7 +121,7 @@
             android:name="com.example.BestPractice.FragmentBestPractice.NewsContentActivity"
             android:label="@string/title_news_content_activity" />
 
-        <!-- Broadcast Demo -->
+        <!-- Broadcast Demo（动态注册） -->
         <activity
             android:name="com.example.Broadcast.BroadcastDemo"
             android:label="@string/title_broadcast_demo" />
@@ -171,6 +184,7 @@
         <activity
             android:name="com.example.DataStore.File.FileOutput"
             android:label="@string/title_file_output">
+
         </activity>
 
         <!-- load data from file -->
@@ -200,6 +214,7 @@
         <activity
             android:name="com.example.DataStore.SQLite.SQLiteDemo"
             android:label="@string/title_sqlite_demo">
+
         </activity>
 
         <!-- LitePal Demo -->
@@ -305,6 +320,58 @@
         <activity
             android:name="com.example.BestPractice.HttpBestPractice.HttpBestPractice"
             android:label="@string/title_http_best_practice">
+
+        </activity>
+
+        <!-- BitmapDrawable -->
+        <activity
+            android:name="com.example.Drawable.BitmapDrawableDemo"
+            android:label="@string/title_bitmap_drawable">
+
+        </activity>
+
+        <!-- LayerDrawable -->
+        <activity
+            android:name="com.example.Drawable.LayerDrawableDemo"
+            android:label="@string/title_layer_drawable">
+
+        </activity>
+
+        <!-- StateListDrawable -->
+        <activity
+            android:name="com.example.Drawable.StateListDrawableDemo"
+            android:label="@string/title_statelist_drawable">
+
+        </activity>
+
+        <!-- LevelListDrawable -->
+        <activity
+            android:name="com.example.Drawable.LevelListDrawableDemo"
+            android:label="@string/title_levellist_drawable">
+        </activity>
+
+        <!-- TransitionDrawable -->
+        <activity
+            android:name="com.example.Drawable.TransitionDrawableDemo"
+            android:label="@string/title_transition_drawable">
+        </activity>
+
+        <!-- InsertDrawable -->
+        <activity
+            android:name="com.example.Drawable.InsertDrawableDemo"
+            android:label="@string/title_insert_drawable">
+        </activity>
+
+        <!-- ClipDrawable -->
+        <activity
+            android:name="com.example.Drawable.ClipDrawableDemo"
+            android:label="@string/title_clip_drawable">
+        </activity>
+
+        <!-- CircleDrawable -->
+        <activity
+            android:name="com.example.Drawable.CircleDrawableDemo"
+            android:label="@string/title_circle_drawable">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

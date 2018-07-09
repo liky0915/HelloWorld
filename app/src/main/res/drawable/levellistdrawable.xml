@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@android:drawable/star_big_off"
+        android:minLevel="1"
+        android:maxLevel="5">
+    </item>
+
+    <item
+        android:drawable="@android:drawable/star_big_on"
+        android:minLevel="6"
+        android:maxLevel="10">
+     </item>
+
+ </level-list>

@@ -41,5 +41,13 @@
     <string name="title_parse_json_with_jsonobject_demo">ParseJSONWithJSONObjectDemo</string>
     <string name="title_parse_json_with_gson_demo">ParseJSONWithGSONDemo</string>
     <string name="title_http_best_practice">HttpBestPractice</string>
+    <string name="title_bitmap_drawable">BitmapDrawableDemo</string>
+    <string name="title_layer_drawable">LayerDrawableDemo</string>
+    <string name="title_statelist_drawable">StateListDrawableDemo</string>
+    <string name="title_levellist_drawable">LevelListDrawableDemo</string>
+    <string name="title_transition_drawable">TransitionDrawableDemo</string>
+    <string name="title_insert_drawable">InsertDrawableDemo</string>
+    <string name="title_clip_drawable">ClipDrawableDemo</string>
+    <string name="title_circle_drawable">CircleDrawableDemo</string>
 
 </resources>

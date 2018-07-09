@@ -31,7 +31,7 @@ public class BaseAdapterDemo extends Activity {
 			list.add(new ItemBean(R.mipmap.ic_launcher, "标题"+i, "内容"+i));
 		//初始化适配器，并绑定数据
 		adapter = new MyBaseAdapter(this, list);
-		//适配器绑定试图控件ListView, 画面显示数据
+		//适配器绑定视图控件ListView, 画面显示数据
 		lv.setAdapter(adapter);
 		//添加点击事件
 		lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {

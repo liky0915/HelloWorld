@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--所绑定的控件在不同状态下显示不同的图片功能-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--按下时-->
+    <item android:state_window_focused="true" android:state_pressed="true" android:drawable="@android:drawable/btn_star_big_on" />
+    <!--获得焦点时-->
+    <item android:state_window_focused="true" android:state_focused="true" android:drawable="@android:drawable/btn_star_big_on" />
+    <!--被选中时-->
+    <item android:state_window_focused="true" android:state_selected="true" android:drawable="@android:drawable/btn_star_big_on" />
+    <!--被checked on时-->
+    <item android:state_window_focused="true" android:state_checked="true" android:drawable="@android:drawable/btn_star_big_on" />
+    <!--默认时-->
+    <item android:drawable="@android:drawable/btn_star_big_off" />
+</selector>

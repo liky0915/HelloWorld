@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- transition 里面最多只能有2个item 实现图片转换时透明度变换 -->
+    <item android:drawable="@android:drawable/star_big_off" />
+    <item android:drawable="@android:drawable/star_big_on" />
+
+ </transition>

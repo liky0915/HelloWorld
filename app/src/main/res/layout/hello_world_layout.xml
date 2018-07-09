@@ -28,4 +28,39 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
+    <com.example.helloworld.MarqueeText
+        android:id="@+id/marqueeText1"
+        android:layout_below="@id/intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:text="我是帅哥，我是帅哥，我是帅哥，我是帅哥，我是帅哥，我是帅哥，我是帅哥，我是帅哥，我是帅哥"/>
+
+    <com.example.helloworld.MarqueeText
+        android:id="@+id/marqueeText2"
+        android:layout_below="@id/marqueeText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:text="我是美女，我是美女，我是美女，我是美女，我是美女，我是美女，我是美女，我是美女，我是美女"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/marqueeText2"
+        android:layout_centerHorizontal="true"
+        android:hint="请输入关键词。。。"
+        android:completionThreshold="3"/>
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiAutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/autoCompleteTextView"
+        android:layout_centerHorizontal="true"
+        android:hint="请输入关键词。。。"
+        android:completionThreshold="3"/>
 </RelativeLayout>

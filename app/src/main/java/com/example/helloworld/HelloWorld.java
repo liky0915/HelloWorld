@@ -9,7 +9,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.MultiAutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +20,9 @@ public class HelloWorld extends AppCompatActivity {
 
     private Button btn1;
     private TextView tv;
+    private AutoCompleteTextView acTextView;
+    private MultiAutoCompleteTextView macTextView;
+    private String[] res = {"beijing1","beijing2","beijing3","shanghai1","shanghai2"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +30,8 @@ public class HelloWorld extends AppCompatActivity {
         setContentView(R.layout.hello_world_layout);
         //初始化
         tv = (TextView) findViewById(R.id.textView);
+        acTextView = findViewById(R.id.autoCompleteTextView);
+        macTextView = findViewById(R.id.multiAutoCompleteTextView);
 
         //隐藏原始标题栏(下面定义的菜单也不会显示了）
         ActionBar ab = getSupportActionBar();
@@ -32,7 +40,7 @@ public class HelloWorld extends AppCompatActivity {
 
         //数据还原（存在的话）
         if(savedInstanceState!=null) {
-            //当savedInstanceState不为空时说明之前Activity已被系统资源回收掉了，现在重新创建时需要还原原来的数据
+            //当savedInstanceState不为空时说明之前Activity已被系统资源回收掉了，现在重新创建时需要还原原来留在画面上的临时数据
             String data = savedInstanceState.getString("data");
             tv.setText(data);
         }
@@ -56,7 +64,7 @@ public class HelloWorld extends AppCompatActivity {
                     所以在Manifest中注册Activity时除了自定义的category之外，默认的category也是必须加上的，
                     并且只有当注册的Action和Category能同时匹配intent的Action和category时，注册的Activity才会响应该intent */
                 //intent2.addCategory("SEC_ACT");
-                //setData方法的参数只能是Uri对象，这里是将一个字符串解析成Uri对象作为参数，而且由于在注册时已经规定数据的协议部分为http，
+                //setData方法的参数只能是Uri对象，这里是将一个字符串解析成Uri对象作为参数，在注册时由<data>标签规定数据的协议部分为http，
                 //所以字符串一定要以http开头不能乱写，否则不会响应此intent
                 //intent2.setData(Uri.parse("http://www.baidu.com"));
                 //除了setData方法外更为常用的传参方法是使用putExtra， setData更多的是用于调用系统资源时，例如下面的intent3,intent4
@@ -66,19 +74,25 @@ public class HelloWorld extends AppCompatActivity {
 
                 //隐式Intent方式调用系统其它程序
                 //调用系统浏览器
-                //Intent intent3 = new Intent(Intent.ACTION_VIEW);//ACTION_VIEW时系统内置的Action，其常量值为"android.intent.action.VIEW"
+                //Intent intent3 = new Intent(Intent.ACTION_VIEW);//ACTION_VIEW是系统内置的Action，其常量值为"android.intent.action.VIEW"
                 //intent3.setData(Uri.parse("http://www.baidu.com"));
                 //startActivity(intent3);
                 //调用系统拨号界面
-                //Intent intent4 = new Intent(Intent.ACTION_DIAL);//ACTION_VIEW时系统内置的Action，其常量值为"android.intent.action.DIAL"
+                //Intent intent4 = new Intent(Intent.ACTION_DIAL);//ACTION_VIEW是系统内置的Action，其常量值为"android.intent.action.DIAL"
                 //intent4.setData(Uri.parse("tel:10086"));
                 //startActivity(intent4);
                 //还有很多其它的系统Action，比如geo显示地理位置等等...不一一举例
             }
         });
+
+        //创建输入框自动填充所需的适配器
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, res);
+        acTextView.setAdapter(adapter);
+        macTextView.setAdapter(adapter);
+        macTextView.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());   //多个关键词之间以逗号作为分隔符
     }
 
-    @Override   //每个在本Activity中启动的带有返回结果的其他Activity都会在自己销毁时回调本Activity的此方法用于传递结果参数，requestCode区分每个启动请求的唯一性
+    @Override   //每个在本Activity中启动的带有返回结果的其他Activity都会在销毁时回调本Activity的此方法用于接收返回参数，requestCode用以区分每个从本活动启动的请求的唯一性
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode){
